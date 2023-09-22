@@ -1,26 +1,26 @@
 import React from "react";
-import Avatar from "@mui/material/Avatar";
-import Button from "@mui/material/Button";
-import { styled } from "@mui/material/styles";
-import TextField from "@mui/material/TextField";
-import Box from "@mui/material/Box";
-import PetsIcon from "@mui/icons-material/Pets";
-import Typography from "@mui/material/Typography";
-import Container from "@mui/material/Container";
-import AddCircleOutlineIcon from "@mui/icons-material/AddCircleOutline";
-
-import { json, useLoaderData } from "remix";
+import Avatar from "@mui/material/Avatar/index.js";
+import Button from "@mui/material/Button/index.js";
+import { styled } from "@mui/material/styles/index.js";
+import TextField from "@mui/material/TextField/index.js";
+import Box from "@mui/material/Box/index.js";
+import PetsIcon from "@mui/icons-material/Pets.js";
+import Typography from "@mui/material/Typography/index.js";
+import Container from "@mui/material/Container/index.js";
+import AddCircleOutlineIcon from "@mui/icons-material/AddCircleOutline.js";
+import { json } from "@remix-run/node";
+import { useLoaderData } from "@remix-run/react";
 import type { Breed } from "@prisma/client";
-import type { LoaderFunction } from "remix";
+import type { LoaderFunction } from "@remix-run/node";
 
-import type { ActionFunction } from "remix";
-import { redirect } from "remix";
+import type { ActionFunction } from "@remix-run/node";
+import { redirect } from "@remix-run/node";
 import { db } from "~/utils/db.server";
-import FormControl from "@mui/material/FormControl";
-import InputLabel from "@mui/material/InputLabel";
-import Select, { SelectChangeEvent } from "@mui/material/Select";
-import MenuItem from "@mui/material/MenuItem";
-import { Grid } from "@mui/material";
+import FormControl from "@mui/material/FormControl/index.js";
+import InputLabel from "@mui/material/InputLabel/index.js";
+import Select, { SelectChangeEvent } from "@mui/material/Select/index.js";
+import MenuItem from "@mui/material/MenuItem/index.js";
+import { Grid } from "@mui/material/index.js";
 
 const Input = styled("input")({
   display: "none",

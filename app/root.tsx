@@ -6,10 +6,12 @@ import {
   Outlet,
   Scripts,
   ScrollRestoration,
-  useCatch,
-} from "remix";
+  useRouteError,
+  isRouteErrorResponse,
+} from "@remix-run/react";
+
 import { withEmotionCache } from "@emotion/react";
-import { unstable_useEnhancedEffect as useEnhancedEffect } from "@mui/material";
+import { unstable_useEnhancedEffect as useEnhancedEffect } from "@mui/material/index.js";
 import theme from "./src/theme";
 import ClientStyleContext from "./src/ClientStyleContext";
 import Layout from "./src/Layout";
@@ -115,7 +117,7 @@ export function ErrorBoundary({ error }: { error: Error }) {
 
 // https://remix.run/docs/en/v1/api/conventions#catchboundary
 export function CatchBoundary() {
-  const caught = useCatch();
+  const caught: any = useRouteError();
 
   let message;
   switch (caught.status) {

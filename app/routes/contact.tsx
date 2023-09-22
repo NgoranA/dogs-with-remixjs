@@ -1,21 +1,21 @@
 import React from "react";
-import Paper from "@mui/material/Paper";
-import Typography from "@mui/material/Typography";
-import Container from "@mui/material/Container";
-import Grid from "@mui/material/Grid";
+import Paper from "@mui/material/Paper/index.js";
+import Typography from "@mui/material/Typography/index.js";
+import Container from "@mui/material/Container/index.js";
+import Grid from "@mui/material/Grid/index.js";
 
 import { ThemeProvider, createTheme } from "@mui/material/styles";
-import PhoneInTalkIcon from "@mui/icons-material/PhoneInTalk";
-import MailIcon from "@mui/icons-material/Mail";
-import MyLocationIcon from "@mui/icons-material/MyLocation";
+import PhoneInTalkIcon from "@mui/icons-material/PhoneInTalk.js";
+import MailIcon from "@mui/icons-material/Mail.js";
+import MyLocationIcon from "@mui/icons-material/MyLocation.js";
 
-import TextField from "@mui/material/TextField";
-import Button from "@mui/material/Button";
-import ArrowUpwardIcon from "@mui/icons-material/ArrowUpward";
+import TextField from "@mui/material/TextField/index.js";
+import Button from "@mui/material/Button/index.js";
+import ArrowUpwardIcon from "@mui/icons-material/ArrowUpward.js";
 
 import world from "../../public/world.svg";
 import Layout from "~/src/Layout";
-import useMediaQuery from "@mui/material/useMediaQuery";
+import useMediaQuery from "@mui/material/useMediaQuery/index.js";
 
 function ContactUs() {
   const matchesLit = useMediaQuery("(max-width : 599px)");

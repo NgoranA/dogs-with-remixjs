@@ -1,15 +1,15 @@
 import React from "react";
-import Paper from "@mui/material/Paper";
-import Button from "@mui/material/Button";
-import Typography from "@mui/material/Typography";
-import Grid from "@mui/material/Grid";
-import Container from "@mui/material/Container";
+import Paper from "@mui/material/Paper/index.js";
+import Button from "@mui/material/Button/index.js";
+import Typography from "@mui/material/Typography/index.js";
+import Grid from "@mui/material/Grid/index.js";
+import Container from "@mui/material/Container/index.js";
 
-import ConnectWithoutContactIcon from "@mui/icons-material/ConnectWithoutContact";
+import ConnectWithoutContactIcon from "@mui/icons-material/ConnectWithoutContact.js";
 
 import dog from "../../../public/dog.jpg";
-import useMediaQuery from "@mui/material/useMediaQuery";
-import Link from "@mui/material/Link";
+import useMediaQuery from "@mui/material/useMediaQuery/index.js";
+import Link from "@mui/material/Link/index.js";
 function Welcome() {
   const matchesLit = useMediaQuery("(max-width : 500px)");
   return (
@@ -20,7 +20,7 @@ function Welcome() {
           backgroundImage: `url(${dog})`,
           backgroundSize: "cover",
           backgroundRepeat: "no-repeat",
-          backgroundAttachment: "fixed",
+          backgroundAttachment: "scroll",
           mb: "3em",
         }}
       >

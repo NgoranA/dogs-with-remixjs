@@ -1,6 +1,6 @@
 import * as React from "react";
-import { Link } from "remix";
-import type { MetaFunction } from "remix";
+import { Link } from "@remix-run/react";
+import type { MetaFunction } from "@remix-run/node";
 import {
   Grid,
   Container,
@@ -9,16 +9,18 @@ import {
   useMediaQuery,
 } from "@mui/material";
 
-import ArrowForwardIcon from "@mui/icons-material/ArrowForward";
+import ArrowForwardIcon from "@mui/icons-material/ArrowForward.js";
 
 import d8 from "../../public/vv.jpg";
 import Layout from "~/src/Layout";
 
 export const meta: MetaFunction = () => {
-  return {
-    title: "About Dogs At Home",
-    // description: 'Welcome to remix!',
-  };
+  return [
+    {
+      title: "About Dogs At Home",
+      // description: 'Welcome to remix!',
+    },
+  ];
 };
 
 export default function About() {

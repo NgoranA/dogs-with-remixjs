@@ -1,14 +1,14 @@
 import React from "react";
 
-import AppBar, { AppBarProps } from "@mui/material/AppBar";
-import Toolbar from "@mui/material/Toolbar";
-import Typography from "@mui/material/Typography";
-import Grid from "@mui/material/Grid";
-import Container from "@mui/material/Container";
+import AppBar, { AppBarProps } from "@mui/material/AppBar/index.js";
+import Toolbar from "@mui/material/Toolbar/index.js";
+import Typography from "@mui/material/Typography/index.js";
+import Grid from "@mui/material/Grid/index.js";
+import Container from "@mui/material/Container/index.js";
 import TextField from "@mui/material/TextField";
-import Button from "@mui/material/Button";
-import Badge from "@mui/material/Badge";
-import Link from "@mui/material/Link";
+import Button from "@mui/material/Button/index.js";
+import Badge from "@mui/material/Badge/index.js";
+import Link from "@mui/material/Link/index.js";
 import {
   styled,
   alpha,
@@ -16,19 +16,19 @@ import {
   useTheme,
   ThemeProvider,
 } from "@mui/material/styles";
-import useMediaQuery from "@mui/material/useMediaQuery";
+import useMediaQuery from "@mui/material/useMediaQuery/index.js";
 import OutlinedInput from "@mui/material/OutlinedInput";
-import InputBase from "@mui/material/InputBase";
+import InputBase from "@mui/material/InputBase/index.js";
 
-import PestControlIcon from "@mui/icons-material/PestControl";
-import EmojiNatureIcon from "@mui/icons-material/EmojiNature";
-import GppGoodOutlinedIcon from "@mui/icons-material/GppGoodOutlined";
-import ShoppingBasketIcon from "@mui/icons-material/ShoppingBasket";
-import SearchIcon from "@mui/icons-material/Search";
-import ConnectWithoutContactIcon from "@mui/icons-material/ConnectWithoutContact";
-import PetsIcon from "@mui/icons-material/Pets";
+import PestControlIcon from "@mui/icons-material/PestControl.js";
+import EmojiNatureIcon from "@mui/icons-material/EmojiNature.js";
+import GppGoodOutlinedIcon from "@mui/icons-material/GppGoodOutlined.js";
+import ShoppingBasketIcon from "@mui/icons-material/ShoppingBasket.js";
+import SearchIcon from "@mui/icons-material/Search.js";
+import ConnectWithoutContactIcon from "@mui/icons-material/ConnectWithoutContact.js";
+import PetsIcon from "@mui/icons-material/Pets.js";
 import { IconButton } from "@mui/material";
-import InfoIcon from "@mui/icons-material/Info";
+import InfoIcon from "@mui/icons-material/Info.js";
 
 import logo from "../../../public/logo.svg";
 import { Box, Menu, MenuItem } from "@mui/material";

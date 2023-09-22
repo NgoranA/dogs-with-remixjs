@@ -10,11 +10,11 @@ import {
   Grid,
   useMediaQuery,
 } from "@mui/material";
-import AddShoppingCartIcon from "@mui/icons-material/AddShoppingCart";
-import InfoIcon from "@mui/icons-material/InfoOutlined";
-import Container from "@mui/material/Container";
-import Typography from "@mui/material/Typography";
-import Link from "@mui/material/Link";
+import AddShoppingCartIcon from "@mui/icons-material/AddShoppingCart.js";
+import InfoIcon from "@mui/icons-material/InfoOutlined.js";
+import Container from "@mui/material/Container/index.js";
+import Typography from "@mui/material/Typography/index.js";
+import Link from "@mui/material/Link/index.js";
 import { Dog } from "@prisma/client";
 
 import d1 from "../../../public/1.jpeg";

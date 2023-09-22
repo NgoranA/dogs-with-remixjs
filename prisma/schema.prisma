@@ -30,7 +30,6 @@ model Dog {
   updatedAt DateTime @updatedAt
   breed     Breed    @relation(fields: [breedId], references: [id])
   breedId   String
-
 }
 
 model User {

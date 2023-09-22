@@ -4,9 +4,9 @@ import {
   Typography,
   Button,
   useMediaQuery,
+  Link,
 } from "@mui/material";
-import { Link } from "@mui/material";
-import ArrowForwardIcon from "@mui/icons-material/ArrowForward";
+import ArrowForwardIcon from "@mui/icons-material/ArrowForward.js";
 
 import d7 from "../../../public/7.png";
 import theme from "../theme";

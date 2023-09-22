@@ -1,5 +1,5 @@
 import * as React from "react";
-import Box from "@mui/material/Box";
+import Box from "@mui/material/Box/index.js";
 import ProTip from "./ProTip";
 import Copyright from "./Copyright";
 import Navigation from "../src/components/Appbar";

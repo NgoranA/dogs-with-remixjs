@@ -1,14 +1,14 @@
-import Avatar from "@mui/material/Avatar";
-import Button from "@mui/material/Button";
-import TextField from "@mui/material/TextField";
-import Box from "@mui/material/Box";
-import PetsIcon from "@mui/icons-material/Pets";
-import Typography from "@mui/material/Typography";
-import Container from "@mui/material/Container";
-import AddCircleOutlineIcon from "@mui/icons-material/AddCircleOutline";
+import Avatar from "@mui/material/Avatar/index.js";
+import Button from "@mui/material/Button/index.js";
+import TextField from "@mui/material/TextField/index.js";
+import Box from "@mui/material/Box/index.js";
+import PetsIcon from "@mui/icons-material/Pets.js";
+import Typography from "@mui/material/Typography/index.js";
+import Container from "@mui/material/Container/index.js";
+import AddCircleOutlineIcon from "@mui/icons-material/AddCircleOutline.js";
 
-import type { ActionFunction } from "remix";
-import { redirect } from "remix";
+import type { ActionFunction } from "@remix-run/node";
+import { redirect } from "@remix-run/node";
 import { db } from "~/utils/db.server";
 
 export const action: ActionFunction = async ({ request }) => {

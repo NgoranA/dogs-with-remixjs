@@ -1,16 +1,16 @@
 import * as React from "react";
-import Typography from "@mui/material/Typography";
-import Container from "@mui/material/Container";
-import Paper from "@mui/material/Paper";
-import Grid from "@mui/material/Grid";
-import Button from "@mui/material/Button";
-import Link from "@mui/material/Link";
+import Typography from "@mui/material/Typography/index.js";
+import Container from "@mui/material/Container/index.js";
+import Paper from "@mui/material/Paper/index.js";
+import Grid from "@mui/material/Grid/index.js";
+import Button from "@mui/material/Button/index.js";
+import Link from "@mui/material/Link/index.js";
 import { ThemeProvider, createTheme, useTheme } from "@mui/material/styles";
 
-import ConnectWithoutContactIcon from "@mui/icons-material/ConnectWithoutContact";
+import ConnectWithoutContactIcon from "@mui/icons-material/ConnectWithoutContact.js";
 
 import logo from "../../public/logo.svg";
-import useMediaQuery from "@mui/material/useMediaQuery";
+import useMediaQuery from "@mui/material/useMediaQuery/index.js";
 
 export default function Copyright() {
   const matchesLit = useMediaQuery("(max-width : 599px)");

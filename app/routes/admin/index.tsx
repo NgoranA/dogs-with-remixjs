@@ -1,12 +1,12 @@
-import Avatar from "@mui/material/Avatar";
-import Button from "@mui/material/Button";
-import TextField from "@mui/material/TextField";
-import FormControlLabel from "@mui/material/FormControlLabel";
-import Checkbox from "@mui/material/Checkbox";
-import Box from "@mui/material/Box";
-import LockOutlinedIcon from "@mui/icons-material/LockOutlined";
-import Typography from "@mui/material/Typography";
-import Container from "@mui/material/Container";
+import Avatar from "@mui/material/Avatar/index.js";
+import Button from "@mui/material/Button/index.js";
+import TextField from "@mui/material/TextField/index.js";
+import FormControlLabel from "@mui/material/FormControlLabel/index.js";
+import Checkbox from "@mui/material/Checkbox/index.js";
+import Box from "@mui/material/Box/index.js";
+import LockOutlinedIcon from "@mui/icons-material/LockOutlined.js";
+import Typography from "@mui/material/Typography/index.js";
+import Container from "@mui/material/Container/index.js";
 
 export default function Login() {
   const handleSubmit = (event: any) => {

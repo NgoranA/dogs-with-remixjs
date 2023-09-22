@@ -1,13 +1,14 @@
 import * as React from "react";
-import { json, useLoaderData } from "remix";
+import { json } from "@remix-run/node";
+import { useLoaderData } from "@remix-run/react";
 import type { Breed, Dog } from "@prisma/client";
 import { db } from "~/utils/db.server";
-import type { LoaderFunction } from "remix";
-import InputLabel from "@mui/material/InputLabel";
-import MenuItem from "@mui/material/MenuItem";
+import type { LoaderFunction } from "@remix-run/node";
+import InputLabel from "@mui/material/InputLabel/index.js";
+import MenuItem from "@mui/material/MenuItem/index.js";
 import FormHelperText from "@mui/material/FormHelperText";
-import FormControl from "@mui/material/FormControl";
-import Select, { SelectChangeEvent } from "@mui/material/Select";
+import FormControl from "@mui/material/FormControl/index.js";
+import Select, { SelectChangeEvent } from "@mui/material/Select/index.js";
 
 import {
   Card,
@@ -20,10 +21,10 @@ import {
   Grid,
   useMediaQuery,
 } from "@mui/material";
-import AddShoppingCartIcon from "@mui/icons-material/AddShoppingCart";
-import InfoIcon from "@mui/icons-material/InfoOutlined";
-import Container from "@mui/material/Container";
-import Typography from "@mui/material/Typography";
+import AddShoppingCartIcon from "@mui/icons-material/AddShoppingCart.js";
+import InfoIcon from "@mui/icons-material/InfoOutlined.js";
+import Container from "@mui/material/Container/index.js";
+import Typography from "@mui/material/Typography/index.js";
 import Link from "@mui/material/Link";
 import Layout from "~/src/Layout";
 

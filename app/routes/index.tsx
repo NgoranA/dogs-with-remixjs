@@ -1,13 +1,13 @@
 import * as React from "react";
-import type { MetaFunction } from "remix";
+import type { MetaFunction } from "@remix-run/node";
 
 import Welcome from "~/src/components/Welcome";
 import Dogs from "~/src/components/Dogs";
 import AboutUs from "~/src/components/AboutUs";
 import Layout from "~/src/Layout";
-
-import { json, useLoaderData } from "remix";
-import { LoaderFunction } from "remix";
+import { json } from "@remix-run/node";
+import { useLoaderData } from "@remix-run/react";
+import { LoaderFunction } from "@remix-run/node";
 import { Dog } from "@prisma/client";
 
 import { db } from "~/utils/db.server";
@@ -26,10 +26,12 @@ export const loader: LoaderFunction = async () => {
 
 // https://remix.run/api/conventions#meta
 export const meta: MetaFunction = () => {
-  return {
-    title: "Dogs At Home",
-    // description: 'Welcome to remix!',
-  };
+  return [
+    {
+      title: "Dogs At Home",
+      // description: 'Welcome to remix!',
+    },
+  ];
 };
 
 // const sequelize = require("../../models/index").sequelize;

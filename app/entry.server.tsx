@@ -1,21 +1,21 @@
-import * as React from 'react';
-import { renderToString } from 'react-dom/server';
-import { RemixServer } from 'remix';
-import type { EntryContext } from 'remix';
+import * as React from "react";
+import { renderToString } from "react-dom/server";
+import { RemixServer } from "@remix-run/react";
+import type { EntryContext } from "@remix-run/node";
 
-import createEmotionCache from './src/createEmotionCache';
-import theme from './src/theme';
+import createEmotionCache from "./src/createEmotionCache";
+import theme from "./src/theme";
 
-import CssBaseline from '@mui/material/CssBaseline';
-import { ThemeProvider } from '@mui/material/styles';
-import { CacheProvider } from '@emotion/react';
-import createEmotionServer from '@emotion/server/create-instance';
+import CssBaseline from "@mui/material/CssBaseline/index.js";
+import { ThemeProvider } from "@mui/material/styles";
+import { CacheProvider } from "@emotion/react";
+import createEmotionServer from "@emotion/server/create-instance";
 
 export default function handleRequest(
   request: Request,
   responseStatusCode: number,
   responseHeaders: Headers,
-  remixContext: EntryContext,
+  remixContext: EntryContext
 ) {
   const cache = createEmotionCache();
   const { extractCriticalToChunks } = createEmotionServer(cache);
@@ -36,10 +36,10 @@ export default function handleRequest(
   // Grab the CSS from emotion
   const { styles } = extractCriticalToChunks(html);
 
-  let stylesHTML = '';
+  let stylesHTML = "";
 
   styles.forEach(({ key, ids, css }) => {
-    const emotionKey = `${key} ${ids.join(' ')}`;
+    const emotionKey = `${key} ${ids.join(" ")}`;
     const newStyleTag = `<style data-emotion="${emotionKey}">${css}</style>`;
     stylesHTML = `${stylesHTML}${newStyleTag}`;
   });
@@ -47,10 +47,10 @@ export default function handleRequest(
   // Add the emotion style tags after the insertion point meta tag
   const markup = html.replace(
     /<meta(\s)*name="emotion-insertion-point"(\s)*content="emotion-insertion-point"(\s)*\/>/,
-    `<meta name="emotion-insertion-point" content="emotion-insertion-point"/>${stylesHTML}`,
+    `<meta name="emotion-insertion-point" content="emotion-insertion-point"/>${stylesHTML}`
   );
 
-  responseHeaders.set('Content-Type', 'text/html');
+  responseHeaders.set("Content-Type", "text/html");
 
   return new Response(`<!DOCTYPE html>${markup}`, {
     status: responseStatusCode,
